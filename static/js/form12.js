@@ -1,3 +1,4 @@
+$(document).ready(function() {
     $('form').on('submit', function() {
         $.ajax({
             data : {
@@ -10,9 +11,12 @@
 
             if (data.error){
                 $('#notok').text(data.error).show();
+                $('#ok').text(data.name).hide();
             }
             else{
                 $('#ok').text(data.name).show();
+                $('#notok').text(data.error).hide();
             }
         });
     });
+});
