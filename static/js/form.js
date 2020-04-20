@@ -1,4 +1,5 @@
-    $('form').on('submit', function() {
+$(document).ready(function() {
+ $('form').on('submit', function() {
         $.ajax({
             data : {
                 name : $('#kod').val(),
@@ -10,9 +11,12 @@
 
             if (data.error){
                 $('#notok').text(data.error).show();
+                $('#ok').hide();
             }
             else{
                 $('#ok').text(data.name).show();
+                $('#notok').hide();
             }
         });
     });
+});

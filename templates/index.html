@@ -2,13 +2,13 @@
 <html>
     <head>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-        <script type=text/javascript src="{{ url_for('static', filename='js/form12.js') }}"></script>
+        <script type=text/javascript src="{{ url_for('static', filename='js/form.js') }}"></script>
     </head>
     <body>
         <form method="POST">
             <p>Wpisz kod pocztowy:</p>
             <input type="text" id="kod">
-            <button id="potwierdz">Sprawdz</button>
+            <button type="submit" id="potwierdz">Sprawdź</button>
         </form>
         <div id="ok" style="display:none;"></div>
         <div id="notok" style="display:none;"></div>

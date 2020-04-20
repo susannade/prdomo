@@ -8,7 +8,8 @@ def index():
 @app.route('/check', methods=['POST'])
 def check():
 
-    sprawdz = request.form12['name']
+    sprawdz = request.form['name']
+
     if re.match("\d{2}-\d{3}$", sprawdz) :
         return jsonify({'name' : 'Prawidłowy kod!'})
     else:
